@@ -1,0 +1,66 @@
+body {
+    padding-top: 40px;
+    font-size: 13px;
+    color: #333;
+    padding-top: 60px;
+    font-family: 'Microsoft YaHei UI','Microsoft YaHei','微软雅黑',"MicrosoftJhengHei", '华文细黑', STHeiti, MingLiu,serif;
+}
+
+.Main {
+    width: 400px;
+    margin: 50px auto;
+}
+
+.logo-big {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 42px;
+    padding-bottom: 30px;
+}
+
+.put {
+    float: left;
+}
+.action a {
+    display: block;
+    color: #333;
+    text-align: center;
+    font-size: 18px;
+}
+
+.open {
+    float: right;
+}
+
+.action a span {
+    display: block;
+    font-size: 36px;
+}
+
+.action a:hover {
+    color: red;
+}
+
+.footer {
+    clear: both;
+    padding-top: 80px;
+    text-align: center;
+}
+
+.footer a:hover {
+    background-color: red;
+    color: wheat;
+}
+
+.footer a {
+    color: #999;
+}

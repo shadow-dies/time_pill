@@ -1,0 +1,95 @@
+body {
+    font-size: 13px;
+    color: #333;
+    padding-top: 60px;
+    font-family: 'Microsoft YaHei UI','Microsoft YaHei','微软雅黑',"MicrosoftJhengHei", '华文细黑', STHeiti, MingLiu,serif;
+}
+
+
+
+.page-header {
+    font-size: 20px;
+    border-bottom: 0 solid #9CF;
+    padding: 0 0 7px 0;
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 28px;
+}
+
+.container .main {
+    width: 690px;
+    float: left;
+    padding-bottom: 60px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 2px;
+}
+
+input[type="text"] {
+    width: 220px;
+    display: inline-block;
+    padding: 8px;
+    border: 1px solid #D9D9D9;
+    border-top: 1px solid silver;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.tips {
+    padding: 0;
+    margin: 0;
+    color: #999;
+    background-color: #f6f6f6;
+}
+form input{
+    margin-bottom: 10px;
+}
+
+textarea{
+    display: inline-block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #D9D9D9;
+    border-top: 1px solid silver;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #333;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0;
+}
+
+input[type="submit"]{
+    background: #ff0033;
+    filter: none;
+    border: none;
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    background-color: chocolate;
+}
+
+.content{
+    margin-bottom: 0px;
+    height: 168px;
+    width: 683px;
+}
+
+.err {
+    color: #900;
+    margin-bottom: 5px;
+}
