@@ -15,6 +15,7 @@ const Put: React.FC = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [time, setTime] = useState(Date.now);
+    const [strtime, setStrtime] = useState(dayjs(time).format('YYYY-MM-DD HH:mm:ss').toString())
     const [content, setContent] = useState("");
     const [tip, setTip] = useState("");
     const key = nanoid();
@@ -27,8 +28,9 @@ const Put: React.FC = () => {
         setEmail(e.target.value);
     }
 
-    const changeTime = (e:any) => {
-        setTime(e.target.value);
+    const changeStrtime = (e:any) => {
+        setStrtime(e.target.value);
+        setTime(Date.parse(e.target.value));
     }
 
     const changeContent = (e:any) => {
@@ -40,6 +42,7 @@ const Put: React.FC = () => {
     }
 
     const sumit = () => {
+        if(name === "" || email === "" || Number.isNaN(time) || content === "") return;
         const messege = {
             Name:name,
             Email:email,
@@ -47,6 +50,7 @@ const Put: React.FC = () => {
             Content: content,
             Tip: tip
         }
+
         localStorage.setItem(key,JSON.stringify(messege));
         navto('/put_done', {state:{value:{key}}});
     }
@@ -56,7 +60,7 @@ const Put: React.FC = () => {
     <div className="container">
         <h1 className="page-header">添加胶囊</h1>
         <div className="main">
-            <form method="post">
+            <form >
                 <label>你的名字</label>
                 <input name="name" type="text" onChange={changeName} />
                 {(name === "") && <div className="err">名字不能为空</div>}
@@ -64,11 +68,12 @@ const Put: React.FC = () => {
                 <input name="email" type="text" onChange={changeEmail}/>
                 {(email === "") && <div className="err">邮箱必须填写</div>}
                 <label>打开时间</label>
-                <input name="time"  type="text" onChange={changeTime} value = {dayjs(time).format('YYYY-MM-DD HH:mm:ss').toString()}/> 
+                <input name="time"  type="text" onChange={changeStrtime} value = {strtime}/> 
                 <span className="tips">打开时间之前，胶囊内容是看不到的。</span>
                 {(time=== null) && <div className="err">内容不能为空</div>}
+                {(Number.isNaN(time)) && <div className="err">时间格式不正确，应为YYYY-MM-DD HH:mm:ss 格式</div>}
                 <label>胶囊内容</label>
-                <textarea className="content"  onChange={changeContent}></textarea>
+                <textarea className="content"  onChange={changeContent}></textarea>c
                 <span className="tips">胶囊内容不能超过5000字。</span>
                 {(content === "") && <div className="err">内容不能为空</div>}
                 <label>未到期提示信息</label>

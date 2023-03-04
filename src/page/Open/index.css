@@ -3,3 +3,17 @@
     margin: 0 auto;
     padding: 0 10px;
 }
+
+.notfound {
+    padding: 8px;
+    width: 400px;
+    color: #900;
+    background-color: #F5F5B5;
+    border: 1px solid #DECA7E;
+    margin: 0;
+}
+
+.pill .content {
+    padding: 15px 20px;
+    border: 1px solid #ff0033;
+}
